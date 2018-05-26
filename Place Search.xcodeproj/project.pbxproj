@@ -21,6 +21,10 @@
 		40C013BF20B84E290057F256 /* DetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C013BE20B84E290057F256 /* DetailRequest.swift */; };
 		40C013C220B84E8B0057F256 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C013C120B84E8B0057F256 /* Place.swift */; };
 		40C013C420B84F370057F256 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C013C320B84F370057F256 /* Detail.swift */; };
+		40C013C620B850E30057F256 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C013C520B850E30057F256 /* HomeViewController.swift */; };
+		40C013C920B8511B0057F256 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C013C820B8511B0057F256 /* HomeViewModel.swift */; };
+		40C6D57E20B9A52300F23BA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6D57D20B9A52300F23BA8 /* MapViewController.swift */; };
+		40C6D58120B9A6BF00F23BA8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6D58020B9A6BF00F23BA8 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		40C013BE20B84E290057F256 /* DetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRequest.swift; sourceTree = "<group>"; };
 		40C013C120B84E8B0057F256 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		40C013C320B84F370057F256 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		40C013C520B850E30057F256 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		40C013C820B8511B0057F256 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		40C6D57D20B9A52300F23BA8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		40C6D58020B9A6BF00F23BA8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,9 @@
 		40C013AC20B848920057F256 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				40C6D57F20B9A6B100F23BA8 /* Detail */,
+				40C6D57C20B9A50A00F23BA8 /* Map */,
+				40C013C720B850FF0057F256 /* Home */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,6 +209,31 @@
 				40C013BC20B84E130057F256 /* SearchRequest.swift */,
 			);
 			path = SearchRequest;
+			sourceTree = "<group>";
+		};
+		40C013C720B850FF0057F256 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				40C013C520B850E30057F256 /* HomeViewController.swift */,
+				40C013C820B8511B0057F256 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		40C6D57C20B9A50A00F23BA8 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				40C6D57D20B9A52300F23BA8 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		40C6D57F20B9A6B100F23BA8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				40C6D58020B9A6BF00F23BA8 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,15 +338,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C013B320B84B380057F256 /* UIViewController+Extension.swift in Sources */,
+				40C013C920B8511B0057F256 /* HomeViewModel.swift in Sources */,
 				40C013B120B84B0D0057F256 /* Error+Extension.swift in Sources */,
 				40C013BF20B84E290057F256 /* DetailRequest.swift in Sources */,
 				40C0138920B8484C0057F256 /* AppDelegate.swift in Sources */,
 				40C013B920B84BB10057F256 /* BaseAPI.swift in Sources */,
+				40C6D57E20B9A52300F23BA8 /* MapViewController.swift in Sources */,
 				40C013BD20B84E130057F256 /* SearchRequest.swift in Sources */,
 				40C013C420B84F370057F256 /* Detail.swift in Sources */,
+				40C013C620B850E30057F256 /* HomeViewController.swift in Sources */,
 				40C013C220B84E8B0057F256 /* Place.swift in Sources */,
 				40C013B720B84B840057F256 /* Reachability.swift in Sources */,
 				40C013B520B84B620057F256 /* Array+Extension.swift in Sources */,
+				40C6D58120B9A6BF00F23BA8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,21 +10,22 @@ import Foundation
 
 protocol Requestable: class {
     associatedtype DataType
-    func request(param: [String: Any], completion: @escaping (_ result: DataType?, _ error: CustomError?) -> Void)
+    func request(completion: @escaping (_ result: DataType?, _ error: CustomError?) -> Void)
 }
 
 struct BaseAPI {
     fileprivate let base = "https://maps.googleapis.com/maps/api/place"
+    fileprivate let output = "/json"
     
     var nearblySearch: String {
-        return "/nearbysearch" + output
+        return base + "/nearbysearch" + output
     }
     
     var detail: String {
-        return "/details" + output
+        return base + "/details" + output
     }
     
-    var output: String {
-        return "/json"
-    }
+    let radius = "1500"
+    let key = "AIzaSyAFkpsx5UF6I4Oij77ir_k5yLWcZRPlD18"
+
 }

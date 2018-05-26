@@ -9,7 +9,7 @@
 import Foundation
 
 class DetailRequest: Requestable {
-    func request(param: [String : Any], completion: @escaping (Detail?, CustomError?) -> Void) {
+    func request(completion: @escaping (Detail?, CustomError?) -> Void) {
         
     }
 }
