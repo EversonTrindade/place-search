@@ -25,6 +25,8 @@
 		40C013C920B8511B0057F256 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C013C820B8511B0057F256 /* HomeViewModel.swift */; };
 		40C6D57E20B9A52300F23BA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6D57D20B9A52300F23BA8 /* MapViewController.swift */; };
 		40C6D58120B9A6BF00F23BA8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6D58020B9A6BF00F23BA8 /* DetailViewController.swift */; };
+		40C6D58420B9ED5F00F23BA8 /* PlaceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6D58320B9ED5F00F23BA8 /* PlaceViewCell.swift */; };
+		40C6D58620B9ED7300F23BA8 /* NoPlaceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6D58520B9ED7300F23BA8 /* NoPlaceViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		40C013C820B8511B0057F256 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		40C6D57D20B9A52300F23BA8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		40C6D58020B9A6BF00F23BA8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		40C6D58320B9ED5F00F23BA8 /* PlaceViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCell.swift; sourceTree = "<group>"; };
+		40C6D58520B9ED7300F23BA8 /* NoPlaceViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPlaceViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,9 +182,9 @@
 		40C013AE20B8489A0057F256 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				40C013B820B84BB10057F256 /* BaseAPI.swift */,
 				40C013BB20B84D7C0057F256 /* SearchRequest */,
 				40C013BA20B84D790057F256 /* DetailRequest */,
-				40C013B820B84BB10057F256 /* BaseAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -214,6 +218,7 @@
 		40C013C720B850FF0057F256 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				40C6D58220B9ED3700F23BA8 /* Components */,
 				40C013C520B850E30057F256 /* HomeViewController.swift */,
 				40C013C820B8511B0057F256 /* HomeViewModel.swift */,
 			);
@@ -234,6 +239,15 @@
 				40C6D58020B9A6BF00F23BA8 /* DetailViewController.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		40C6D58220B9ED3700F23BA8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				40C6D58320B9ED5F00F23BA8 /* PlaceViewCell.swift */,
+				40C6D58520B9ED7300F23BA8 /* NoPlaceViewCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +363,8 @@
 				40C013C620B850E30057F256 /* HomeViewController.swift in Sources */,
 				40C013C220B84E8B0057F256 /* Place.swift in Sources */,
 				40C013B720B84B840057F256 /* Reachability.swift in Sources */,
+				40C6D58420B9ED5F00F23BA8 /* PlaceViewCell.swift in Sources */,
+				40C6D58620B9ED7300F23BA8 /* NoPlaceViewCell.swift in Sources */,
 				40C013B520B84B620057F256 /* Array+Extension.swift in Sources */,
 				40C6D58120B9A6BF00F23BA8 /* DetailViewController.swift in Sources */,
 			);

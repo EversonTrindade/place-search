@@ -16,6 +16,8 @@ protocol Requestable: class {
 struct BaseAPI {
     fileprivate let base = "https://maps.googleapis.com/maps/api/place"
     fileprivate let output = "/json"
+    let rankBy = "distance"
+    let key = "AIzaSyAFkpsx5UF6I4Oij77ir_k5yLWcZRPlD18"
     
     var nearblySearch: String {
         return base + "/nearbysearch" + output
@@ -24,8 +26,4 @@ struct BaseAPI {
     var detail: String {
         return base + "/details" + output
     }
-    
-    let radius = "1500"
-    let key = "AIzaSyAFkpsx5UF6I4Oij77ir_k5yLWcZRPlD18"
-
 }

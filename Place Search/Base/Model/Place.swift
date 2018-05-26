@@ -8,6 +8,25 @@
 
 import Foundation
 
-struct Place: Decodable {
-    
+struct Places: Codable {
+    var next_page_token: String?
+    var results: [Place]?
+}
+
+struct Place: Codable {
+    var name: String?
+    var place_id: String?
+    var rating: Double?
+    var opening_hours: Opening?
+    var photos: [Photo]?
+}
+
+struct Opening: Codable {
+    var open_now: Bool?
+}
+
+struct Photo: Codable {
+    var height: Int?
+    var width: Int?
+    var photo_reference: String?
 }
