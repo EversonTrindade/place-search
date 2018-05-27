@@ -23,6 +23,7 @@ struct Place: Codable {
 
 struct Opening: Codable {
     var open_now: Bool?
+    var weekday_text: [String]?
 }
 
 struct Photo: Codable {

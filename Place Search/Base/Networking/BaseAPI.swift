@@ -23,7 +23,7 @@ struct BaseAPI {
         return base + "/nearbysearch" + output
     }
     
-    var detail: String {
+    var details: String {
         return base + "/details" + output
     }
 }

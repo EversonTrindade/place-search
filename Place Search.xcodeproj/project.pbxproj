@@ -27,6 +27,7 @@
 		40C6D58120B9A6BF00F23BA8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6D58020B9A6BF00F23BA8 /* DetailViewController.swift */; };
 		40C6D58420B9ED5F00F23BA8 /* PlaceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6D58320B9ED5F00F23BA8 /* PlaceViewCell.swift */; };
 		40C6D58620B9ED7300F23BA8 /* NoPlaceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6D58520B9ED7300F23BA8 /* NoPlaceViewCell.swift */; };
+		40C6D58820BAF6F100F23BA8 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C6D58720BAF6F100F23BA8 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		40C6D58020B9A6BF00F23BA8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		40C6D58320B9ED5F00F23BA8 /* PlaceViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCell.swift; sourceTree = "<group>"; };
 		40C6D58520B9ED7300F23BA8 /* NoPlaceViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPlaceViewCell.swift; sourceTree = "<group>"; };
+		40C6D58720BAF6F100F23BA8 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,9 +220,9 @@
 		40C013C720B850FF0057F256 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				40C6D58220B9ED3700F23BA8 /* Components */,
 				40C013C520B850E30057F256 /* HomeViewController.swift */,
 				40C013C820B8511B0057F256 /* HomeViewModel.swift */,
+				40C6D58220B9ED3700F23BA8 /* Components */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				40C6D58020B9A6BF00F23BA8 /* DetailViewController.swift */,
+				40C6D58720BAF6F100F23BA8 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C6D58820BAF6F100F23BA8 /* DetailViewModel.swift in Sources */,
 				40C013B320B84B380057F256 /* UIViewController+Extension.swift in Sources */,
 				40C013C920B8511B0057F256 /* HomeViewModel.swift in Sources */,
 				40C013B120B84B0D0057F256 /* Error+Extension.swift in Sources */,

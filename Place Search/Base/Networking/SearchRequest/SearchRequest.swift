@@ -47,6 +47,6 @@ class SearchRequest: Requestable {
                 return
             }
             completion(places, nil)
-            }.resume()
+        }.resume()
     }
 }

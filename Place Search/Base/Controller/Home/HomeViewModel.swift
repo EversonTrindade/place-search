@@ -39,7 +39,7 @@ class HomeViewModel: HomeViewModelPresentable {
                 self.loadContent?.didLoadContent(error: "Places not found!")
                 return
             }
-            self.places = self.places + places
+            self.places = places
             self.loadContent?.didLoadContent(error: nil)
         }
     }

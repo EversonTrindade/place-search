@@ -148,7 +148,7 @@
                     <tabBarItem key="tabBarItem" title="Home" id="UZq-SU-EdP"/>
                     <connections>
                         <outlet property="tableView" destination="Mf1-oG-CoU" id="ZnE-cA-kqg"/>
-                        <segue destination="QIR-G1-p3v" kind="show" id="LhT-Av-MbZ"/>
+                        <segue destination="QIR-G1-p3v" kind="show" identifier="showDetail" id="LhT-Av-MbZ"/>
                         <segue destination="oci-m7-oNT" kind="show" id="Cvp-XW-j3z"/>
                     </connections>
                 </viewController>
@@ -156,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="832.79999999999995" y="-91.304347826086968"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="IVc-d7-5Q2">
             <objects>
-                <viewController id="QIR-G1-p3v" sceneMemberID="viewController">
+                <viewController id="QIR-G1-p3v" customClass="DetailViewController" customModule="Place_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ptk-9e-YYX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

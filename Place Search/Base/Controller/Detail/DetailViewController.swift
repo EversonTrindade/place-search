@@ -8,10 +8,23 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
-
+class DetailViewController: UIViewController, DetailLoadContent {
+    
+    // MARK: Properties
+    lazy var viewModel: DetailViewModelPresentable = DetailViewModel(loadContent: self)
+    private var placeID = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.getPlaceDetails(with: placeID)
+    }
+    
+    func fill(with placeID: String) {
+        self.placeID = placeID
     }
 
+    func didLoadContent(error: String?) {
+        
+    }
+    
 }

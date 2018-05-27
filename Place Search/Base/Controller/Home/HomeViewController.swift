@@ -23,11 +23,12 @@ class HomeViewController: UIViewController, HomeLoadContent {
     // MARK: Properties
     lazy var viewModel: HomeViewModelPresentable = HomeViewModel(loadContent: self)
     var locationManager = CLLocationManager()
-    var type = "car_repair"
+    var type = "airport"
     
     // MARK: ViewController life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,7 +64,9 @@ class HomeViewController: UIViewController, HomeLoadContent {
     // MARK: Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Identifier().detail {
-            //AQUI
+            if let detailViewController = segue.destination as? DetailViewController, let placeId = sender as? String {
+                detailViewController.fill(with: placeId)
+            }
         }
     }
 }
