@@ -9,7 +9,7 @@
 import Foundation
 
 protocol DetailLoadContent: class {
-    func didLoadContent(error: String?)
+    func didLoadContent(detail: Detail?, error: String?)
 }
 
 protocol DetailViewModelPresentable: class {
@@ -26,7 +26,11 @@ class DetailViewModel: DetailViewModelPresentable {
 
     func getPlaceDetails(with placeID: String) {
         DetailRequest(placeID: placeID).request { (result, error) in
-            
+            guard let detail = result else {
+                self.loadContent?.didLoadContent(detail: nil, error: "Error")
+                return
+            }
+            self.loadContent?.didLoadContent(detail: detail, error: nil)
         }
     }
 }

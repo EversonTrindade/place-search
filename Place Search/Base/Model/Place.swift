@@ -19,6 +19,16 @@ struct Place: Codable {
     var rating: Double?
     var opening_hours: Opening?
     var photos: [Photo]?
+    var geometry: Geometry?
+}
+
+struct Geometry: Codable {
+    var location: Location?
+}
+
+struct Location: Codable {
+    var lat: Double?
+    var lng: Double?
 }
 
 struct Opening: Codable {
