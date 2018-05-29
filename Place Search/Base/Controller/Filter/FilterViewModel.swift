@@ -24,6 +24,8 @@ class FilterViewModel: FilterViewModelPresentable {
         self.placeTypes = placeTypes
     }
     
+    init() { }
+    
     func getPlaceType(row: Int) -> String {
         guard let name = placeTypes.object(index: row) else {
             return ""

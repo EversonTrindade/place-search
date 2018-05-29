@@ -19,8 +19,8 @@ class FilterViewController: UIViewController {
     
     // MARK: Properties
     private var currentPlaceType = ""
-    fileprivate let placeTypes = ["accounting", "airport", "amusement_park", "aquarium", "art_gallery", "atm", "bakery"]
-    lazy var viewModel: FilterViewModelPresentable = FilterViewModel(placeTypes: self.placeTypes)
+    fileprivate let placeTypes = ["atm", "bank", "bar", "bus_station", "gas_station", "gym", "hospital", "library", "movie_theater", "museum", "night_club", "park", "pharmacy", "police", "school", "shopping_mall", "stadium", "subway_station"]
+    lazy var viewModel: FilterViewModelPresentable = FilterViewModel(placeTypes: placeTypes)
     private var saveButton = UIBarButtonItem()
     weak var delegate: FilterPlaceTypeDelegate?
 
@@ -65,7 +65,6 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FilterViewCell", for: indexPath) as? FilterViewCell else {
             return UITableViewCell()
         }
-//        cell.accessoryType = currentPlaceType == viewModel.getPlaceType(row: indexPath.row) ? .checkmark : .none
         cell.fillCell(title: viewModel.getPlaceType(row: indexPath.row))
         return cell
     }

@@ -11,6 +11,12 @@
 		4031899520BC97460003285C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4031899420BC97460003285C /* SearchViewModel.swift */; };
 		405D254520BCC87A00C2CC36 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D254420BCC87A00C2CC36 /* SearchViewCell.swift */; };
 		405D254720BCFDD900C2CC36 /* SearchNotFoundViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D254620BCFDD900C2CC36 /* SearchNotFoundViewCell.swift */; };
+		405D254C20BD269400C2CC36 /* PlaceMocked.json in Resources */ = {isa = PBXBuildFile; fileRef = 405D254B20BD269400C2CC36 /* PlaceMocked.json */; };
+		405D254E20BD26EF00C2CC36 /* PlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D254D20BD26EF00C2CC36 /* PlaceTests.swift */; };
+		405D255020BD2B8F00C2CC36 /* DetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D254F20BD2B8F00C2CC36 /* DetailTests.swift */; };
+		405D255220BD2BEE00C2CC36 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D255120BD2BEE00C2CC36 /* MapViewModelTests.swift */; };
+		405D255420BD2C0D00C2CC36 /* FilterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D255320BD2C0D00C2CC36 /* FilterViewModelTests.swift */; };
+		405D255620BD2C1F00C2CC36 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D255520BD2C1F00C2CC36 /* SearchViewModelTests.swift */; };
 		408A0B0020BB638D00E15E85 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0AFF20BB638D00E15E85 /* MapViewModel.swift */; };
 		408A0B0320BBB29800E15E85 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B0220BBB29800E15E85 /* FilterViewController.swift */; };
 		408A0B0520BBB2C800E15E85 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B0420BBB2C800E15E85 /* FilterViewModel.swift */; };
@@ -57,6 +63,12 @@
 		4031899420BC97460003285C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		405D254420BCC87A00C2CC36 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		405D254620BCFDD900C2CC36 /* SearchNotFoundViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNotFoundViewCell.swift; sourceTree = "<group>"; };
+		405D254B20BD269400C2CC36 /* PlaceMocked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PlaceMocked.json; sourceTree = "<group>"; };
+		405D254D20BD26EF00C2CC36 /* PlaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTests.swift; sourceTree = "<group>"; };
+		405D254F20BD2B8F00C2CC36 /* DetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTests.swift; sourceTree = "<group>"; };
+		405D255120BD2BEE00C2CC36 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
+		405D255320BD2C0D00C2CC36 /* FilterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModelTests.swift; sourceTree = "<group>"; };
+		405D255520BD2C1F00C2CC36 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		408A0AFF20BB638D00E15E85 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		408A0B0220BBB29800E15E85 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		408A0B0420BBB2C800E15E85 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
@@ -129,6 +141,33 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		405D254820BD255100C2CC36 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				405D255120BD2BEE00C2CC36 /* MapViewModelTests.swift */,
+				405D255320BD2C0D00C2CC36 /* FilterViewModelTests.swift */,
+				405D255520BD2C1F00C2CC36 /* SearchViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		405D254920BD25C200C2CC36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				405D254D20BD26EF00C2CC36 /* PlaceTests.swift */,
+				405D254F20BD2B8F00C2CC36 /* DetailTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		405D254A20BD266900C2CC36 /* json mocket */ = {
+			isa = PBXGroup;
+			children = (
+				405D254B20BD269400C2CC36 /* PlaceMocked.json */,
+			);
+			path = "json mocket";
+			sourceTree = "<group>";
+		};
 		408A0B0120BBB27800E15E85 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +217,8 @@
 		40C0139C20B848500057F256 /* Place SearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				405D254920BD25C200C2CC36 /* Model */,
+				405D254820BD255100C2CC36 /* ViewModel */,
 				40C0139D20B848500057F256 /* Place_SearchTests.swift */,
 				40C0139F20B848500057F256 /* Info.plist */,
 			);
@@ -187,6 +228,7 @@
 		40C013A820B848660057F256 /* Other Files */ = {
 			isa = PBXGroup;
 			children = (
+				405D254A20BD266900C2CC36 /* json mocket */,
 				40C013AF20B848C10057F256 /* Extensions */,
 				40C0139420B8484F0057F256 /* Info.plist */,
 				40C0138F20B8484F0057F256 /* Assets.xcassets */,
@@ -226,10 +268,10 @@
 		40C013AC20B848920057F256 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				40C6D57C20B9A50A00F23BA8 /* Map */,
 				4031899120BC934A0003285C /* Search */,
 				408A0B0120BBB27800E15E85 /* Filter */,
 				40C6D57F20B9A6B100F23BA8 /* Detail */,
-				40C6D57C20B9A50A00F23BA8 /* Map */,
 				40C013C720B850FF0057F256 /* Home */,
 			);
 			path = Controller;
@@ -410,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				405D254C20BD269400C2CC36 /* PlaceMocked.json in Resources */,
 				40C0139320B8484F0057F256 /* LaunchScreen.storyboard in Resources */,
 				40C0139020B8484F0057F256 /* Assets.xcassets in Resources */,
 				40C0138E20B8484C0057F256 /* Main.storyboard in Resources */,
@@ -467,6 +510,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C0139E20B848500057F256 /* Place_SearchTests.swift in Sources */,
+				405D255020BD2B8F00C2CC36 /* DetailTests.swift in Sources */,
+				405D255620BD2C1F00C2CC36 /* SearchViewModelTests.swift in Sources */,
+				405D254E20BD26EF00C2CC36 /* PlaceTests.swift in Sources */,
+				405D255420BD2C0D00C2CC36 /* FilterViewModelTests.swift in Sources */,
+				405D255220BD2BEE00C2CC36 /* MapViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol SearchLoadContent: class {
-    func didLoadContent(error: String?)
+    func didLoadContent(places: [Place]?, error: String?)
 }
 protocol SearchViewModelPresentable: class {
     func numberOfSections() -> Int
@@ -20,7 +20,7 @@ protocol SearchViewModelPresentable: class {
     func getCellDTO(index: Int) -> SearchDTO
 }
 
-class SearchViewmodel: SearchViewModelPresentable {
+class SearchViewModel: SearchViewModelPresentable {
     private weak var loadContent: SearchLoadContent?
     private var places = [Place]()
     
@@ -28,14 +28,16 @@ class SearchViewmodel: SearchViewModelPresentable {
         self.loadContent = loadContent
     }
     
+    init() { }
+    
     func getPlace(query: String) {
         SearchRequest(location: "", type: "", query: query.formatSeachValue()).request { (result, error) in
             guard let places = result?.results else {
-                self.loadContent?.didLoadContent(error: "Places not found!")
+                self.loadContent?.didLoadContent(places: nil, error: "Places not found!")
                 return
             }
-            self.places = places
-            self.loadContent?.didLoadContent(error: nil)
+            self.places = places.sorted { $0.name ?? "" < $1.name ?? "" }
+            self.loadContent?.didLoadContent(places: self.places, error: nil)
         }
     }
     

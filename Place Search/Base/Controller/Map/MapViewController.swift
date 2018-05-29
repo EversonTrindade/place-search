@@ -23,7 +23,7 @@ class MapViewController: UIViewController, MapLoadContent, FilterPlaceTypeDelega
     // MARK: Properties
     lazy var viewModel: MapViewModelPresentable = MapViewModel(loadContent: self)
     var locationManager = CLLocationManager()
-    var type = "amusement_park"
+    var type = "shopping_mall"
     
     // MARK: ViewController life cycle
     override func viewDidLoad() {
@@ -52,7 +52,9 @@ class MapViewController: UIViewController, MapLoadContent, FilterPlaceTypeDelega
         } else {
             if let places = places {
                 for index in 0...places.count {
-                    mapView.addAnnotation(viewModel.addPinAnnotaionOnMap(with: index))
+                    DispatchQueue.main.async {
+                        self.mapView.addAnnotation(self.viewModel.addPinAnnotaionOnMap(with: index))
+                    }
                 }
             }
         }
@@ -99,4 +101,17 @@ extension MapViewController: CLLocationManagerDelegate, MKMapViewDelegate {
         }
         locationManager.startUpdatingLocation()
     }
+    
+//    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+//        
+//        let alertView = UIAlertController(title: "Action", message: nil, preferredStyle: .actionSheet)
+//        alertView.addAction(UIAlertAction(title: "Detail", style: .default, handler: { (action) in
+//            
+//        }))
+//        alertView.addAction(UIAlertAction(title: "Show In Map", style: .default, handler: { (action) in
+//            
+//        }))
+//        alertView.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+//        self.present(alertView, animated: true, completion: nil)
+//    }
 }

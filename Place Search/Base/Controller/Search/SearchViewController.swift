@@ -12,11 +12,16 @@ protocol SearchPlaceDelegate: class {
     func setPlaceType(type: String)
 }
 
+fileprivate struct Identifier {
+    let seachCell = "SearchViewCell"
+    let notSeached = "SearchNotFoundViewCell"
+}
+
 class SearchViewController: UIViewController, SearchLoadContent {
     
     // MARK: Properties
     weak var delegate: SearchPlaceDelegate?
-    lazy var viewModel: SearchViewModelPresentable = SearchViewmodel(loadContent: self)
+    lazy var viewModel: SearchViewModelPresentable = SearchViewModel(loadContent: self)
     
     // MARK: IBOutlet
     @IBOutlet weak var searchBar: UISearchBar!
@@ -46,18 +51,22 @@ class SearchViewController: UIViewController, SearchLoadContent {
     }
 
     // MARK: SearchLoadContent
-    func didLoadContent(error: String?) {
+    func didLoadContent(places: [Place]?, error: String?) {
         dismissLoader()
         if let error = error {
             showDefaultAlert(message: error, completeBlock: nil)
         } else {
+            guard let places = places else {
+                return
+            }
+            if places.count == 0 {
+                showDefaultAlert(message: "Nothing found :/", completeBlock: nil)
+            }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
-    
-    
 }
 
 extension SearchViewController: UISearchBarDelegate {
@@ -76,7 +85,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchViewCell", for: indexPath) as? SearchViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifier().seachCell, for: indexPath) as? SearchViewCell else {
             return UITableViewCell()
         }
         cell.fillCell(dto: viewModel.getCellDTO(index: indexPath.row))

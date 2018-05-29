@@ -22,12 +22,13 @@ protocol MapViewModelPresentable: class {
 
 class MapViewModel: MapViewModelPresentable {
     
+    // MARK: Properties
     private weak var loadContent: MapLoadContent?
     private var places = [Place]()
     private var locationManager = CLLocationManager()
     private var userLocation = CLLocation()
 
-    
+    // MARK: funcitions
     init(loadContent: MapLoadContent) {
         self.loadContent = loadContent
     }
@@ -38,7 +39,6 @@ class MapViewModel: MapViewModelPresentable {
                 self.loadContent?.didLoadContent(nil, "Places not found!")
                 return
             }
-            
             self.places = places.sorted { $0.name ?? "" < $1.name ?? "" }
             self.loadContent?.didLoadContent(self.places, nil)
         }
@@ -67,10 +67,13 @@ class MapViewModel: MapViewModelPresentable {
         let location = CLLocationCoordinate2DMake(place.geometry?.location?.lat ?? 0, place.geometry?.location?.lng ?? 0)
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
-        annotation.title = place.name
-        
-        annotation.subtitle = "\(getDist(userLocation.coordinate, annotation.coordinate)) Km of distance"
+        annotation.title = "\(place.name ?? "") - Rating: \(place.rating ?? 0)"
+        annotation.subtitle = "\(getDist(userLocation.coordinate, annotation.coordinate)) Km of distance\(checkIfIsClosed(open: place.opening_hours?.open_now))"
         return annotation
+    }
+    
+    private func checkIfIsClosed(open: Bool?) -> String {
+        return open == true ? " - Open" : " - Closed"
     }
     
     func getDist(_ userCoordinate: CLLocationCoordinate2D,_ pinCoordinate: CLLocationCoordinate2D) -> String{
