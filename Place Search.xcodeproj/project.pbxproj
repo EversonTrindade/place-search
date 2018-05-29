@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4031899320BC93650003285C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4031899220BC93650003285C /* SearchViewController.swift */; };
+		4031899520BC97460003285C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4031899420BC97460003285C /* SearchViewModel.swift */; };
+		405D254520BCC87A00C2CC36 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D254420BCC87A00C2CC36 /* SearchViewCell.swift */; };
+		405D254720BCFDD900C2CC36 /* SearchNotFoundViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D254620BCFDD900C2CC36 /* SearchNotFoundViewCell.swift */; };
 		408A0B0020BB638D00E15E85 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0AFF20BB638D00E15E85 /* MapViewModel.swift */; };
 		408A0B0320BBB29800E15E85 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B0220BBB29800E15E85 /* FilterViewController.swift */; };
 		408A0B0520BBB2C800E15E85 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B0420BBB2C800E15E85 /* FilterViewModel.swift */; };
@@ -49,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4031899220BC93650003285C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4031899420BC97460003285C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		405D254420BCC87A00C2CC36 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
+		405D254620BCFDD900C2CC36 /* SearchNotFoundViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNotFoundViewCell.swift; sourceTree = "<group>"; };
 		408A0AFF20BB638D00E15E85 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		408A0B0220BBB29800E15E85 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		408A0B0420BBB2C800E15E85 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
@@ -102,6 +110,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4031899120BC934A0003285C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4031899220BC93650003285C /* SearchViewController.swift */,
+				4031899420BC97460003285C /* SearchViewModel.swift */,
+				405D254320BCC85200C2CC36 /* Components */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		405D254320BCC85200C2CC36 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				405D254420BCC87A00C2CC36 /* SearchViewCell.swift */,
+				405D254620BCFDD900C2CC36 /* SearchNotFoundViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		408A0B0120BBB27800E15E85 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +226,7 @@
 		40C013AC20B848920057F256 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4031899120BC934A0003285C /* Search */,
 				408A0B0120BBB27800E15E85 /* Filter */,
 				40C6D57F20B9A6B100F23BA8 /* Detail */,
 				40C6D57C20B9A50A00F23BA8 /* Map */,
@@ -410,12 +438,15 @@
 				40C013B120B84B0D0057F256 /* Error+Extension.swift in Sources */,
 				40C013BF20B84E290057F256 /* DetailRequest.swift in Sources */,
 				40C0138920B8484C0057F256 /* AppDelegate.swift in Sources */,
+				405D254520BCC87A00C2CC36 /* SearchViewCell.swift in Sources */,
+				4031899320BC93650003285C /* SearchViewController.swift in Sources */,
 				408A0B0E20BC469500E15E85 /* String+Extension.swift in Sources */,
 				40C013B920B84BB10057F256 /* BaseAPI.swift in Sources */,
 				40C6D57E20B9A52300F23BA8 /* MapViewController.swift in Sources */,
 				40C013BD20B84E130057F256 /* SearchRequest.swift in Sources */,
 				40C013C420B84F370057F256 /* Detail.swift in Sources */,
 				408A0B0020BB638D00E15E85 /* MapViewModel.swift in Sources */,
+				405D254720BCFDD900C2CC36 /* SearchNotFoundViewCell.swift in Sources */,
 				40C6D58B20BB4B4500F23BA8 /* ImageViewCell.swift in Sources */,
 				40C013C620B850E30057F256 /* HomeViewController.swift in Sources */,
 				40C013C220B84E8B0057F256 /* Place.swift in Sources */,
@@ -425,6 +456,7 @@
 				40C6D58420B9ED5F00F23BA8 /* PlaceViewCell.swift in Sources */,
 				40C6D58620B9ED7300F23BA8 /* NoPlaceViewCell.swift in Sources */,
 				40C013B520B84B620057F256 /* Array+Extension.swift in Sources */,
+				4031899520BC97460003285C /* SearchViewModel.swift in Sources */,
 				40C6D58D20BB4B6D00F23BA8 /* DetailViewCell.swift in Sources */,
 				40C6D58120B9A6BF00F23BA8 /* DetailViewController.swift in Sources */,
 			);

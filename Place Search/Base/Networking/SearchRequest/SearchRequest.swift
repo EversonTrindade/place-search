@@ -10,24 +10,32 @@ import Foundation
 
 class SearchRequest: Requestable {
     
-    private var location: String
-    private var rankBy: String
-    private var type: String
-    private var key: String
+    private var location: String?
+    private var rankBy: String?
+    private var type: String?
+    private var key: String?
+    private var query: String?
+    private var urlComponents: URLComponents?
     
-    init(location: String, type: String) {
+    init(location: String, type: String, query: String) {
         self.location = location      
         self.type = type
         self.rankBy = BaseAPI().rankBy
         self.key = BaseAPI().key
+        self.query = query
     }
     
     func request(completion: @escaping (Places?, CustomError?) -> Void) {
-        var urlComponents = URLComponents(string: BaseAPI().nearblySearch)
-        urlComponents?.queryItems = [URLQueryItem(name: "location", value: location),
-                                     URLQueryItem(name: "type", value: type),
-                                     URLQueryItem(name: "rankby", value: rankBy),
-                                     URLQueryItem(name: "key", value: key)]
+        if (query ?? "").isEmpty {
+            urlComponents = URLComponents(string: BaseAPI().nearblySearch)
+            urlComponents?.queryItems = [URLQueryItem(name: "location", value: location),
+                                         URLQueryItem(name: "type", value: type),
+                                         URLQueryItem(name: "rankby", value: rankBy),
+                                         URLQueryItem(name: "key", value: key)]
+        } else {
+            urlComponents = URLComponents(string: BaseAPI().textSearch)
+            urlComponents?.queryItems = [URLQueryItem(name: "query", value: query), URLQueryItem(name: "key", value: key)]
+        }
         guard let url = urlComponents?.url else {
             completion(nil, CustomError())
             return

@@ -25,6 +25,7 @@ class MapViewModel: MapViewModelPresentable {
     private weak var loadContent: MapLoadContent?
     private var places = [Place]()
     private var locationManager = CLLocationManager()
+    private var userLocation = CLLocation()
 
     
     init(loadContent: MapLoadContent) {
@@ -32,7 +33,7 @@ class MapViewModel: MapViewModelPresentable {
     }
 
     func getPlaces(coordinate: CLLocationCoordinate2D?, type: String) {
-        SearchRequest(location: getLocation(coordinate: coordinate), type: type).request { (result, error) in
+        SearchRequest(location: getLocation(coordinate: coordinate), type: type, query: "").request { (result, error) in
             guard let places = result?.results else {
                 self.loadContent?.didLoadContent(nil, "Places not found!")
                 return
@@ -52,8 +53,8 @@ class MapViewModel: MapViewModelPresentable {
             return MKCoordinateRegion()
         }
         
-        let userLocation = last as CLLocation
-        let center = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        userLocation = last
+        let center = CLLocationCoordinate2D(latitude: self.userLocation.coordinate.latitude, longitude: self.userLocation.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
         return region
     }
@@ -67,6 +68,15 @@ class MapViewModel: MapViewModelPresentable {
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
         annotation.title = place.name
+        
+        annotation.subtitle = "\(getDist(userLocation.coordinate, annotation.coordinate)) Km of distance"
         return annotation
+    }
+    
+    func getDist(_ userCoordinate: CLLocationCoordinate2D,_ pinCoordinate: CLLocationCoordinate2D) -> String{
+        let user = CLLocation(latitude: userCoordinate.latitude, longitude: userCoordinate.longitude)
+        let annotation = CLLocation(latitude: pinCoordinate.latitude, longitude: pinCoordinate.longitude)
+        let distanceInMeters = user.distance(from: annotation)
+        return String(format: "%.2f", distanceInMeters / 1000)
     }
 }

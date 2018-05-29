@@ -12,4 +12,8 @@ extension String {
     func formatFilterValue() -> String {
         return self.replacingOccurrences(of: "_", with: " ", options: NSString.CompareOptions.literal, range:nil).uppercased()
     }
+    
+    func formatSeachValue() -> String {
+        return self.replacingOccurrences(of: " ", with: "+", options: NSString.CompareOptions.literal, range:nil).uppercased()
+    }
 }

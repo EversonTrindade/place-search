@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol FilterPlaceTypeDelegate: class {
+    func setPlaceType(type: String)
+}
+
 class FilterViewController: UIViewController {
 
     // MARK: IBOutlet
@@ -18,17 +22,20 @@ class FilterViewController: UIViewController {
     fileprivate let placeTypes = ["accounting", "airport", "amusement_park", "aquarium", "art_gallery", "atm", "bakery"]
     lazy var viewModel: FilterViewModelPresentable = FilterViewModel(placeTypes: self.placeTypes)
     private var saveButton = UIBarButtonItem()
+    weak var delegate: FilterPlaceTypeDelegate?
 
-    func setPlaceType(currentPlaceType: String) {
-        self.currentPlaceType = currentPlaceType
-    }
-    
+    // MARK: ViewController life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         formatNavigationBar()
     }
     
+    // MARK: Functions
+    func setPlaceType(currentPlaceType: String) {
+        self.currentPlaceType = currentPlaceType
+    }
+
     func formatNavigationBar() {
         saveButton = UIBarButtonItem(title: "Save",
                                      style: .plain,
@@ -39,7 +46,8 @@ class FilterViewController: UIViewController {
     }
     
     @objc func saveButtonAction() {
-        
+        delegate?.setPlaceType(type: currentPlaceType)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

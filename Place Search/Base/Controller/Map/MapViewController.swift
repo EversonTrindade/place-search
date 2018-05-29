@@ -12,20 +12,20 @@ import MapKit
 
 fileprivate struct Identifiers {
     let segueFilter = "goToFilter"
+    let segueSearch = "goToSearch"
 }
 
-class MapViewController: UIViewController, MapLoadContent {
-
+class MapViewController: UIViewController, MapLoadContent, FilterPlaceTypeDelegate, SearchPlaceDelegate {
+    
     // MARK: IBOutlet
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var searchBtn: UIButton!
     
     // MARK: Properties
     lazy var viewModel: MapViewModelPresentable = MapViewModel(loadContent: self)
     var locationManager = CLLocationManager()
     var type = "amusement_park"
     
+    // MARK: ViewController life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -35,7 +35,16 @@ class MapViewController: UIViewController, MapLoadContent {
         super.viewWillAppear(true)
         navigationItem.title = type.formatFilterValue()
     }
-
+    
+    // MARK: FilterPlaceTypeDelegate
+    func setPlaceType(type: String) {
+        self.type = type
+        DispatchQueue.main.async {
+            self.mapView.removeAnnotations(self.mapView.annotations)
+        }
+        viewModel.getPlaces(coordinate: locationManager.location?.coordinate, type: type)
+    }
+    
     // MARK: MapLoadContent
     func didLoadContent(_ places: [Place]?, _ error: String?) {
         if let _ = error {
@@ -50,23 +59,28 @@ class MapViewController: UIViewController, MapLoadContent {
     }
     
     // MARK: IBAction
-    @IBAction func searchAction(_ sender: Any) {
-        
-    }
-    
     @IBAction func goToFilter(_ sender: Any) {
         performSegue(withIdentifier: Identifiers().segueFilter, sender: type)
     }
+    
+    @IBAction func goToSearch(_ sender: Any) {
+        performSegue(withIdentifier: Identifiers().segueSearch, sender: nil)
+    }
+
     
     // MARK: Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Identifiers().segueFilter {
             if let filterViewController = segue.destination as? FilterViewController, let type = sender as? String {
                 filterViewController.setPlaceType(currentPlaceType: type)
+                filterViewController.delegate = self
+            }
+        } else if segue.identifier == Identifiers().segueSearch {
+            if let searchViewController = segue.destination as? SearchViewController {
+                searchViewController.delegate = self
             }
         }
     }
-    
 }
 
 extension MapViewController: CLLocationManagerDelegate, MKMapViewDelegate {
@@ -85,6 +99,4 @@ extension MapViewController: CLLocationManagerDelegate, MKMapViewDelegate {
         }
         locationManager.startUpdatingLocation()
     }
-    
-    
 }

@@ -34,7 +34,7 @@ class HomeViewModel: HomeViewModelPresentable {
     }
     
     func getPlaces(coordinate: CLLocationCoordinate2D?, type: String) {
-        SearchRequest(location: getLocation(coordinate: coordinate), type: type).request { (result, error) in
+        SearchRequest(location: getLocation(coordinate: coordinate), type: type, query: "").request { (result, error) in
             guard let places = result?.results else {
                 self.loadContent?.didLoadContent(error: "Places not found!")
                 return
