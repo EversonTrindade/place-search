@@ -26,12 +26,12 @@ class DetailViewController: UIViewController, DetailLoadContent {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         showLoader()
-        viewModel.getPlaceDetails(with: placeID)
     }
     
     // MARK: Functions
     func fill(with placeID: String) {
         self.placeID = placeID
+        viewModel.getPlaceDetails(with: placeID)
     }
 
     func didLoadContent(error: String?) {
@@ -40,6 +40,7 @@ class DetailViewController: UIViewController, DetailLoadContent {
             showDefaultAlert(message: err, completeBlock: nil)
         } else {
             DispatchQueue.main.async {
+                self.dismissLoader()
                 self.tableView.reloadData()
             }
         }

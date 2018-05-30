@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Place Search/Base/Controller/Detail/Components/Review/ReviewViewCell.swift"
-            timestampString = "549361554.467019"
+            timestampString = "549389053.38047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Place Search/Base/Controller/Detail/Components/Review/Components/ReviewCollectionViewCell.swift"
-            timestampString = "549361554.468703"
+            timestampString = "549389053.384997"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Place Search/Base/Controller/Detail/Components/Review/ReviewViewCell.swift"
-            timestampString = "549361554.468881"
+            timestampString = "549389053.385168"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Place Search/Base/Controller/Detail/Components/Review/ReviewViewCellModel.swift"
-            timestampString = "549361554.469116"
+            timestampString = "549389053.38527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -74,12 +74,12 @@
                   moduleName = "Place Search"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Everson/Git/Place%20Search/Place%20Search/Base/Controller/Detail/Components/Review/ReviewViewCellModel.swift"
-                  timestampString = "549361555.02876"
+                  timestampString = "549388420.480574"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "4">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -89,12 +89,12 @@
                   moduleName = "Place Search"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Everson/Git/Place%20Search/Place%20Search/Base/Controller/Detail/Components/Review/ReviewViewCellModel.swift"
-                  timestampString = "549361555.031581"
+                  timestampString = "549388420.483999"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
                   endingLineNumber = "24"
-                  offsetFromSymbolStart = "36">
+                  offsetFromSymbolStart = "25">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Place Search/Base/Controller/Detail/Components/Detail/DetailViewCellModel.swift"
-            timestampString = "549361554.469364"
+            timestampString = "549389053.385468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Place Search/Base/Controller/Detail/Components/Detail/DetailViewCellModel.swift"
-            timestampString = "549361554.4695179"
+            timestampString = "549389053.385581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -137,56 +137,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Place Search/Base/Networking/SearchRequest/SearchRequest.swift"
-            timestampString = "549361554.469714"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "request(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Place_Search.SearchRequest.request(completion: (Swift.Optional&lt;Place_Search.Places&gt;, Swift.Optional&lt;Place_Search.CustomError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Place Search"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Everson/Git/Place%20Search/Place%20Search/Base/Networking/SearchRequest/SearchRequest.swift"
-                  timestampString = "549361555.05808"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "2724">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Place_Search.SearchRequest.request(completion: (Swift.Optional&lt;Place_Search.Places&gt;, Swift.Optional&lt;Place_Search.CustomError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Place Search"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Everson/Git/Place%20Search/Place%20Search/Base/Networking/SearchRequest/SearchRequest.swift"
-                  timestampString = "549361555.061169"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Place Search/Base/Networking/DetailRequest/DetailRequest.swift"
-            timestampString = "549355252.366531"
+            timestampString = "549389053.38571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -202,12 +154,12 @@
                   moduleName = "Place Search"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Everson/Git/Place%20Search/Place%20Search/Base/Networking/DetailRequest/DetailRequest.swift"
-                  timestampString = "549361555.071522"
+                  timestampString = "549388420.531695"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "712">
+                  offsetFromSymbolStart = "984">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -217,12 +169,12 @@
                   moduleName = "Place Search"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Everson/Git/Place%20Search/Place%20Search/Base/Networking/DetailRequest/DetailRequest.swift"
-                  timestampString = "549361555.0742249"
+                  timestampString = "549388420.535306"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
                   endingLineNumber = "31"
-                  offsetFromSymbolStart = "68">
+                  offsetFromSymbolStart = "79">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -233,12 +185,156 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Place Search/Base/Networking/SearchRequest/SearchRequest.swift"
-            timestampString = "549361554.470143"
+            filePath = "Place Search/Base/Controller/Detail/DetailViewController.swift"
+            timestampString = "549389053.385834"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "didLoadContent(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Place Search/Base/Controller/Detail/DetailViewController.swift"
+            timestampString = "549389053.391114"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "tableView(_:willDisplay:forRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Place Search/Base/Controller/Detail/DetailViewController.swift"
+            timestampString = "549389053.391485"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Place Search/Base/Controller/Detail/DetailViewController.swift"
+            timestampString = "549389053.391808"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Place Search/Base/Controller/Detail/DetailViewController.swift"
+            timestampString = "549389053.392315"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Place Search/Base/Controller/Detail/DetailViewController.swift"
+            timestampString = "549389053.392713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "fill(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Place Search/Base/Controller/Detail/DetailViewModel.swift"
+            timestampString = "549389053.393129"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getPlaceDetails(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Place_Search.DetailViewModel.getPlaceDetails(with: Swift.String) -&gt; ()"
+                  moduleName = "Place Search"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Everson/Git/Place%20Search/Place%20Search/Base/Controller/Detail/DetailViewModel.swift"
+                  timestampString = "549388499.318942"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Place_Search.Detail&gt;, Swift.Optional&lt;Place_Search.CustomError&gt;) -&gt; () in Place_Search.DetailViewModel.getPlaceDetails(with: Swift.String) -&gt; ()"
+                  moduleName = "Place Search"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Everson/Git/Place%20Search/Place%20Search/Base/Controller/Detail/DetailViewModel.swift"
+                  timestampString = "549388499.321507"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Place Search/Base/Networking/DetailRequest/DetailRequest.swift"
+            timestampString = "549389053.3932281"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "request(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -249,13 +345,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Place Search/Base/Controller/Map/MapViewModel.swift"
-            timestampString = "549361554.470379"
+            filePath = "Place Search/Base/Controller/Detail/DetailViewModel.swift"
+            timestampString = "549389053.393324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "getDist(_:_:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getPlaceDetails(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -265,13 +361,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Place Search/Base/Controller/Map/MapViewModel.swift"
-            timestampString = "549361554.470505"
+            filePath = "Place Search/Base/Controller/Detail/DetailViewController.swift"
+            timestampString = "549389053.393386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "addPinAnnotaionOnMap(with:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -281,13 +377,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Place Search/Base/Controller/Map/MapViewModel.swift"
-            timestampString = "549361554.470681"
+            filePath = "Place Search/Base/Controller/Detail/DetailViewController.swift"
+            timestampString = "549389053.393669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "getDist(_:_:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
