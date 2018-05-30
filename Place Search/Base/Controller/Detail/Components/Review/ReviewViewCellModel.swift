@@ -20,13 +20,17 @@ protocol ReviewViewCellModelPresentable: class {
 
 class ReviewViewCellModel: ReviewViewCellModelPresentable {
     
-    private var reviews = [Review]()
+    // MARK: Properties
+    var reviews = [Review]()
     private weak var loadContent: ReviewLoadContent?
     
+    // MARK: Functions
     init(reviews: [Review], loadContent: ReviewLoadContent) {
         self.reviews = reviews
         self.loadContent = loadContent
     }
+    
+    init() { }
     
     func numberOfSections() -> Int {
         return 1
@@ -40,7 +44,9 @@ class ReviewViewCellModel: ReviewViewCellModelPresentable {
         guard let review = reviews.object(index: index) else {
             return ReviewCollectionCellDTO()
         }
+        
         return ReviewCollectionCellDTO(name: review.author_name ?? "",
+                                       image: review.profile_photo_url ?? "",
                                        rating: review.rating ?? 0,
                                        review: review.text ?? "",
                                        date: review.time ?? 0,

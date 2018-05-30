@@ -61,7 +61,7 @@ class SearchViewController: UIViewController, SearchLoadContent {
                 return
             }
             if places.count == 0 {
-                showDefaultAlert(message: "Nothing found :/", completeBlock: nil)
+                showDefaultAlert(message: "Error from server", completeBlock: nil)
             }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -107,6 +107,10 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: Identifier().detail, sender: viewModel.getPlaceId(index: indexPath.row))
+        if Reachability.isConnectedToNetwork() {
+            performSegue(withIdentifier: Identifier().detail, sender: viewModel.getPlaceId(index: indexPath.row))
+        } else {
+            showDefaultAlert(message: "No connetion", completeBlock: nil)
+        }
     }
 }

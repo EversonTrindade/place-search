@@ -18,12 +18,18 @@ class DetailViewController: UIViewController, DetailLoadContent {
     lazy var viewModel: DetailViewModelPresentable = DetailViewModel(loadContent: self)
     private var placeID = ""
     
+    // MARK: ViewController life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         showLoader()
         viewModel.getPlaceDetails(with: placeID)
     }
     
+    // MARK: Functions
     func fill(with placeID: String) {
         self.placeID = placeID
     }
@@ -55,13 +61,26 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DetailViewCell", for: indexPath) as? DetailViewCell else {
                 return UITableViewCell()
             }
+            cell.fillCell(dto: viewModel.getDetails(index: indexPath.row))
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewViewCell", for: indexPath) as? ReviewViewCell else {
                 return UITableViewCell()
             }
-            cell.fillCollection(reviews: viewModel.getReviews(index: indexPath.row))
+            cell.fillCollection(reviews: viewModel.getReviews())
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            if let detailCell = cell as? DetailViewCell {
+                detailCell.fillCell(dto: viewModel.getDetails(index: indexPath.row))
+            }
+        } else {
+            if let reviewCell = cell as? ReviewViewCell {
+                reviewCell.fillCollection(reviews: viewModel.getReviews())
+            }
         }
     }
     

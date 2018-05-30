@@ -28,7 +28,7 @@ class ReviewViewCell: UITableViewCell, ReviewLoadContent {
         collectionView.delegate = self
     }
     
-    
+    // MARK: ReviewLoadContent
     func didLoadContent(error: String?) {
         DispatchQueue.main.async {
             self.collectionView.reloadData()

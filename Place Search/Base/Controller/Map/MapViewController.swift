@@ -42,20 +42,29 @@ class MapViewController: UIViewController, MapLoadContent, FilterPlaceTypeDelega
         DispatchQueue.main.async {
             self.mapView.removeAnnotations(self.mapView.annotations)
         }
-        viewModel.getPlaces(coordinate: locationManager.location?.coordinate, type: type)
+        if Reachability.isConnectedToNetwork() {
+            viewModel.getPlaces(coordinate: locationManager.location?.coordinate, type: type)
+        } else {
+            showDefaultAlert(message: "No connetion", completeBlock: nil)
+        }
+        
     }
     
     // MARK: MapLoadContent
     func didLoadContent(_ places: [Place]?, _ error: String?) {
         if let _ = error {
-            showDefaultAlert(message: "XXXXX", completeBlock: nil)
+            showDefaultAlert(message: "Error", completeBlock: nil)
         } else {
-            if let places = places {
-                for index in 0...places.count {
-                    DispatchQueue.main.async {
-                        self.mapView.addAnnotation(self.viewModel.addPinAnnotaionOnMap(with: index))
+            if places?.count ?? 0 > 0 {
+                if let places = places {
+                    for index in 0...places.count {
+                        DispatchQueue.main.async {
+                            self.mapView.addAnnotation(self.viewModel.addPinAnnotaionOnMap(with: index))
+                        }
                     }
                 }
+            } else {
+                showDefaultAlert(message: "Error from server", completeBlock: nil)
             }
         }
     }
@@ -95,23 +104,15 @@ extension MapViewController: CLLocationManagerDelegate, MKMapViewDelegate {
         if status == .denied {
             showDefaultAlert(message: "Location access denied. Turn on location service in settings.", completeBlock: nil)
         } else if status == .authorizedWhenInUse{
-            viewModel.getPlaces(coordinate: locationManager.location?.coordinate, type: type)
+            if Reachability.isConnectedToNetwork() {
+                viewModel.getPlaces(coordinate: locationManager.location?.coordinate, type: type)
+            } else {
+                showDefaultAlert(message: "No connetion", completeBlock: nil)
+            }
         } else if status == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
         }
         locationManager.startUpdatingLocation()
     }
-    
-//    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-//        
-//        let alertView = UIAlertController(title: "Action", message: nil, preferredStyle: .actionSheet)
-//        alertView.addAction(UIAlertAction(title: "Detail", style: .default, handler: { (action) in
-//            
-//        }))
-//        alertView.addAction(UIAlertAction(title: "Show In Map", style: .default, handler: { (action) in
-//            
-//        }))
-//        alertView.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        self.present(alertView, animated: true, completion: nil)
-//    }
+
 }

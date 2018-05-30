@@ -1,21 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='Place SearchTests.xctest' tests='11' failures='0'>
-  <testsuite name='Place_SearchTests.DetailTests' tests='2' failures='0'>
-    <testcase classname='Place_SearchTests.DetailTests' name='testExample' time='0.003'/>
-    <testcase classname='Place_SearchTests.DetailTests' name='testPerformanceExample' time='1.274'/>
+<testsuites name='Place SearchTests.xctest' tests='20' failures='0'>
+  <testsuite name='Place_SearchTests.DetailTests' tests='1' failures='0'>
+    <testcase classname='Place_SearchTests.DetailTests' name='testShouldValidateDetailResult' time='0.023'/>
+  </testsuite>
+  <testsuite name='Place_SearchTests.DetailViewModelTests' tests='4' failures='0'>
+    <testcase classname='Place_SearchTests.DetailViewModelTests' name='testShouldValidateGetDetails' time='0.004'/>
+    <testcase classname='Place_SearchTests.DetailViewModelTests' name='testShouldValidateHeigthForRow' time='0.004'/>
+    <testcase classname='Place_SearchTests.DetailViewModelTests' name='testShouldValidateNumberOfRowsInSection' time='0.004'/>
+    <testcase classname='Place_SearchTests.DetailViewModelTests' name='testShouldValidateNumberOfSections' time='0.004'/>
   </testsuite>
   <testsuite name='Place_SearchTests.FilterViewModelTests' tests='4' failures='0'>
-    <testcase classname='Place_SearchTests.FilterViewModelTests' name='testShouldValidateGetPlaceType' time='0.003'/>
+    <testcase classname='Place_SearchTests.FilterViewModelTests' name='testShouldValidateGetPlaceType' time='0.001'/>
     <testcase classname='Place_SearchTests.FilterViewModelTests' name='testShouldValidateHeightForRow' time='0.001'/>
-    <testcase classname='Place_SearchTests.FilterViewModelTests' name='testShouldValidateNumberOfItems' time='0.001'/>
+    <testcase classname='Place_SearchTests.FilterViewModelTests' name='testShouldValidateNumberOfItems' time='0.025'/>
     <testcase classname='Place_SearchTests.FilterViewModelTests' name='testShouldValidateNumberOfSections' time='0.001'/>
   </testsuite>
+  <testsuite name='Place_SearchTests.MapViewModelTests' tests='3' failures='0'>
+    <testcase classname='Place_SearchTests.MapViewModelTests' name='testShouldValidateCheckIfIsClosed' time='0.001'/>
+    <testcase classname='Place_SearchTests.MapViewModelTests' name='testShouldValidateGetDist' time='0.149'/>
+    <testcase classname='Place_SearchTests.MapViewModelTests' name='testShouldValidateGetLocation' time='0.001'/>
+  </testsuite>
   <testsuite name='Place_SearchTests.PlaceTests' tests='1' failures='0'>
-    <testcase classname='Place_SearchTests.PlaceTests' name='testShouldValidatePlaceResult' time='0.045'/>
+    <testcase classname='Place_SearchTests.PlaceTests' name='testShouldValidatePlaceResult' time='0.010'/>
   </testsuite>
   <testsuite name='Place_SearchTests.Place_SearchTests' tests='2' failures='0'>
     <testcase classname='Place_SearchTests.Place_SearchTests' name='testExample' time='0.001'/>
-    <testcase classname='Place_SearchTests.Place_SearchTests' name='testPerformanceExample' time='0.253'/>
+    <testcase classname='Place_SearchTests.Place_SearchTests' name='testPerformanceExample' time='0.494'/>
+  </testsuite>
+  <testsuite name='Place_SearchTests.ReviewViewCellModelTests' tests='3' failures='0'>
+    <testcase classname='Place_SearchTests.ReviewViewCellModelTests' name='testShouldValidateNumberOfRowsInSection' time='0.003'/>
+    <testcase classname='Place_SearchTests.ReviewViewCellModelTests' name='testShouldValidateNumberOfSections' time='0.003'/>
+    <testcase classname='Place_SearchTests.ReviewViewCellModelTests' name='testShouldValidateReviewDTO' time='0.003'/>
   </testsuite>
   <testsuite name='Place_SearchTests.SearchViewModelTests' tests='2' failures='0'>
     <testcase classname='Place_SearchTests.SearchViewModelTests' name='testShouldValidateHeightForRow' time='0.001'/>

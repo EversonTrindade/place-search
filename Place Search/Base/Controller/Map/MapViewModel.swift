@@ -32,6 +32,8 @@ class MapViewModel: MapViewModelPresentable {
     init(loadContent: MapLoadContent) {
         self.loadContent = loadContent
     }
+    
+    init() { }
 
     func getPlaces(coordinate: CLLocationCoordinate2D?, type: String) {
         SearchRequest(location: getLocation(coordinate: coordinate), type: type, query: "").request { (result, error) in
@@ -44,7 +46,7 @@ class MapViewModel: MapViewModelPresentable {
         }
     }
     
-    private func getLocation(coordinate: CLLocationCoordinate2D?) -> String {
+    func getLocation(coordinate: CLLocationCoordinate2D?) -> String {
         return "\(coordinate?.latitude ?? 0),\(coordinate?.longitude ?? 0)"
     }
     
@@ -72,11 +74,11 @@ class MapViewModel: MapViewModelPresentable {
         return annotation
     }
     
-    private func checkIfIsClosed(open: Bool?) -> String {
+    func checkIfIsClosed(open: Bool?) -> String {
         return open == true ? " - Open" : " - Closed"
     }
     
-    func getDist(_ userCoordinate: CLLocationCoordinate2D,_ pinCoordinate: CLLocationCoordinate2D) -> String{
+    func getDist(_ userCoordinate: CLLocationCoordinate2D,_ pinCoordinate: CLLocationCoordinate2D) -> String {
         let user = CLLocation(latitude: userCoordinate.latitude, longitude: userCoordinate.longitude)
         let annotation = CLLocation(latitude: pinCoordinate.latitude, longitude: pinCoordinate.longitude)
         let distanceInMeters = user.distance(from: annotation)

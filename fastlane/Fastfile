@@ -23,5 +23,5 @@ platform :ios do
 end
 
 lane :tests do
-  run_tests(scheme: "Place SearchTests", device: "Iphone 7", code_coverage: true, clean: true)
+  run_tests(scheme: "Place SearchTests", code_coverage: true, clean: true)
 end

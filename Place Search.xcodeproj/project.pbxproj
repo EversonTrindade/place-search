@@ -18,6 +18,11 @@
 		405D255220BD2BEE00C2CC36 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D255120BD2BEE00C2CC36 /* MapViewModelTests.swift */; };
 		405D255420BD2C0D00C2CC36 /* FilterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D255320BD2C0D00C2CC36 /* FilterViewModelTests.swift */; };
 		405D255620BD2C1F00C2CC36 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D255520BD2C1F00C2CC36 /* SearchViewModelTests.swift */; };
+		4081F87020BE523F0037513A /* DetailViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081F86F20BE523F0037513A /* DetailViewCellModel.swift */; };
+		4081F87220BE62F40037513A /* ReviewCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081F87120BE62F40037513A /* ReviewCollectionViewCellModel.swift */; };
+		4081F87420BE86150037513A /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081F87320BE86150037513A /* DetailViewModelTests.swift */; };
+		4081F87620BE87970037513A /* ReviewViewCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081F87520BE87970037513A /* ReviewViewCellModelTests.swift */; };
+		4081F87820BE8B080037513A /* DetailMocked.json in Resources */ = {isa = PBXBuildFile; fileRef = 4081F87720BE8B080037513A /* DetailMocked.json */; };
 		408A0B0020BB638D00E15E85 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0AFF20BB638D00E15E85 /* MapViewModel.swift */; };
 		408A0B0320BBB29800E15E85 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B0220BBB29800E15E85 /* FilterViewController.swift */; };
 		408A0B0520BBB2C800E15E85 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B0420BBB2C800E15E85 /* FilterViewModel.swift */; };
@@ -66,6 +71,11 @@
 		405D255120BD2BEE00C2CC36 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
 		405D255320BD2C0D00C2CC36 /* FilterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModelTests.swift; sourceTree = "<group>"; };
 		405D255520BD2C1F00C2CC36 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		4081F86F20BE523F0037513A /* DetailViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCellModel.swift; sourceTree = "<group>"; };
+		4081F87120BE62F40037513A /* ReviewCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCellModel.swift; sourceTree = "<group>"; };
+		4081F87320BE86150037513A /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		4081F87520BE87970037513A /* ReviewViewCellModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewCellModelTests.swift; sourceTree = "<group>"; };
+		4081F87720BE8B080037513A /* DetailMocked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DetailMocked.json; sourceTree = "<group>"; };
 		408A0AFF20BB638D00E15E85 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		408A0B0220BBB29800E15E85 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		408A0B0420BBB2C800E15E85 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
@@ -128,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				401D139B20BDD32D0041989F /* ReviewCollectionViewCell.swift */,
+				4081F87120BE62F40037513A /* ReviewCollectionViewCellModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -156,6 +167,8 @@
 				405D255120BD2BEE00C2CC36 /* MapViewModelTests.swift */,
 				405D255320BD2C0D00C2CC36 /* FilterViewModelTests.swift */,
 				405D255520BD2C1F00C2CC36 /* SearchViewModelTests.swift */,
+				4081F87320BE86150037513A /* DetailViewModelTests.swift */,
+				4081F87520BE87970037513A /* ReviewViewCellModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -172,9 +185,19 @@
 		405D254A20BD266900C2CC36 /* json mocket */ = {
 			isa = PBXGroup;
 			children = (
+				4081F87720BE8B080037513A /* DetailMocked.json */,
 				405D254B20BD269400C2CC36 /* PlaceMocked.json */,
 			);
 			path = "json mocket";
+			sourceTree = "<group>";
+		};
+		4081F86E20BE521E0037513A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				40C6D58C20BB4B6D00F23BA8 /* DetailViewCell.swift */,
+				4081F86F20BE523F0037513A /* DetailViewCellModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		408A0B0120BBB27800E15E85 /* Filter */ = {
@@ -353,7 +376,7 @@
 		40C6D58920BB4B1100F23BA8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				40C6D58C20BB4B6D00F23BA8 /* DetailViewCell.swift */,
+				4081F86E20BE521E0037513A /* Detail */,
 				401D139720BDCF630041989F /* Review */,
 			);
 			path = Components;
@@ -442,6 +465,7 @@
 			files = (
 				405D254C20BD269400C2CC36 /* PlaceMocked.json in Resources */,
 				40C0139320B8484F0057F256 /* LaunchScreen.storyboard in Resources */,
+				4081F87820BE8B080037513A /* DetailMocked.json in Resources */,
 				40C0139020B8484F0057F256 /* Assets.xcassets in Resources */,
 				40C0138E20B8484C0057F256 /* Main.storyboard in Resources */,
 			);
@@ -476,6 +500,8 @@
 				40C6D57E20B9A52300F23BA8 /* MapViewController.swift in Sources */,
 				40C013BD20B84E130057F256 /* SearchRequest.swift in Sources */,
 				40C013C420B84F370057F256 /* Detail.swift in Sources */,
+				4081F87020BE523F0037513A /* DetailViewCellModel.swift in Sources */,
+				4081F87220BE62F40037513A /* ReviewCollectionViewCellModel.swift in Sources */,
 				408A0B0020BB638D00E15E85 /* MapViewModel.swift in Sources */,
 				40C013C220B84E8B0057F256 /* Place.swift in Sources */,
 				408A0B0520BBB2C800E15E85 /* FilterViewModel.swift in Sources */,
@@ -495,7 +521,9 @@
 			files = (
 				40C0139E20B848500057F256 /* Place_SearchTests.swift in Sources */,
 				405D255020BD2B8F00C2CC36 /* DetailTests.swift in Sources */,
+				4081F87620BE87970037513A /* ReviewViewCellModelTests.swift in Sources */,
 				405D255620BD2C1F00C2CC36 /* SearchViewModelTests.swift in Sources */,
+				4081F87420BE86150037513A /* DetailViewModelTests.swift in Sources */,
 				405D254E20BD26EF00C2CC36 /* PlaceTests.swift in Sources */,
 				405D255420BD2C0D00C2CC36 /* FilterViewModelTests.swift in Sources */,
 				405D255220BD2BEE00C2CC36 /* MapViewModelTests.swift in Sources */,

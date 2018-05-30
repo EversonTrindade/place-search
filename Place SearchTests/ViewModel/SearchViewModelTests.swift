@@ -21,10 +21,7 @@ class SearchViewModelTests: XCTestCase {
         XCTAssert(viewModel.numberOfSections() == 1)
     }
 
-    
     func testShouldValidateHeightForRow() {
         XCTAssert(viewModel.heightForRow() == 85.0)
     }
-    
-    
 }

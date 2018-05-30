@@ -13,16 +13,11 @@ protocol Requestable: class {
     func request(completion: @escaping (_ result: DataType?, _ error: CustomError?) -> Void)
 }
 
-//https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&key=AIzaSyAFkpsx5UF6I4Oij77ir_k5yLWcZRPlD18
-
-
-//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-23.5135871938739,-46.6879204156&type=art_gallery&rankby=distance&key=AIzaSyAFkpsx5UF6I4Oij77ir_k5yLWcZRPlD18
-
 struct BaseAPI {
     fileprivate let base = "https://maps.googleapis.com/maps/api/place"
     fileprivate let output = "/json"
     let rankBy = "distance"
-    let key = "AIzaSyAFkpsx5UF6I4Oij77ir_k5yLWcZRPlD18"
+    let key = "AIzaSyDUyxhRApH8EBcDFWmXqpjy60XfwDjc3XM"
     
     var nearblySearch: String {
         return base + "/nearbysearch" + output
@@ -35,4 +30,9 @@ struct BaseAPI {
     var textSearch: String {
         return base + "/textsearch" + output
     }
+    
+    var photo: String {
+        return base + "/photo"
+    }
+    
 }
