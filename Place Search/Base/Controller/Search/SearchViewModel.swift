@@ -18,6 +18,7 @@ protocol SearchViewModelPresentable: class {
     func heightForRow() -> CGFloat
     func getPlace(query: String)
     func getCellDTO(index: Int) -> SearchDTO
+    func getPlaceId(index: Int) -> String
 }
 
 class SearchViewModel: SearchViewModelPresentable {

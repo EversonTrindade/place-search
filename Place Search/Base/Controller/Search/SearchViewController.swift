@@ -15,6 +15,7 @@ protocol SearchPlaceDelegate: class {
 fileprivate struct Identifier {
     let seachCell = "SearchViewCell"
     let notSeached = "SearchNotFoundViewCell"
+    let detail = "goToDetail"
 }
 
 class SearchViewController: UIViewController, SearchLoadContent {
@@ -67,6 +68,15 @@ class SearchViewController: UIViewController, SearchLoadContent {
             }
         }
     }
+    
+    // MARK: Prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Identifier().detail {
+            if let detailViewController = segue.destination as? DetailViewController, let placeId = sender as? String {
+                detailViewController.fill(with: placeId)
+            }
+        }
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
@@ -94,5 +104,9 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRow()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Identifier().detail, sender: viewModel.getPlaceId(index: indexPath.row))
     }
 }

@@ -8,15 +8,11 @@
 
 import UIKit
 
-class DetailViewController: UITableViewController, DetailLoadContent {
+class DetailViewController: UIViewController, DetailLoadContent {
     
     // MARK: IBOutlet
-    @IBOutlet weak var detailImg: UIImage!
-    @IBOutlet weak var phoneLbl: UILabel!
-    @IBOutlet weak var addressLbl: UILabel!
-    @IBOutlet weak var websiteLbl: UILabel!
-    @IBOutlet weak var ratingLbl: UILabel!
-    @IBOutlet weak var openLbl: UILabel!
+
+    @IBOutlet var tableView: UITableView!
     
     // MARK: Properties
     lazy var viewModel: DetailViewModelPresentable = DetailViewModel(loadContent: self)
@@ -32,25 +28,44 @@ class DetailViewController: UITableViewController, DetailLoadContent {
         self.placeID = placeID
     }
 
-    func didLoadContent(detail: Detail?, error: String?) {
+    func didLoadContent(error: String?) {
         dismissLoader()
         if let err = error {
             showDefaultAlert(message: err, completeBlock: nil)
         } else {
-            fillCell(detail: detail)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+}
+
+extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSections()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSection()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "DetailViewCell", for: indexPath) as? DetailViewCell else {
+                return UITableViewCell()
+            }
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewViewCell", for: indexPath) as? ReviewViewCell else {
+                return UITableViewCell()
+            }
+            cell.fillCollection(reviews: viewModel.getReviews(index: indexPath.row))
+            return cell
         }
     }
     
-    private func fillCell(detail: Detail?) {
-        if let detail = detail {
-//            phoneLbl.text = detail.result?.formatted_phone_number
-//            addressLbl.text = detail.result?.formatted_address
-//            websiteLbl.text = detail.result?.website
-//            ratingLbl.text = "\(detail.result?.rating ?? 0)"
-//            openLbl.text = "\(detail.result?.opening_hours?.open_now ?? false)"
-//
-//            self.tableView.reloadData()
-        }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.heightForRow()
     }
-    
 }

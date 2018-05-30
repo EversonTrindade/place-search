@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='Place SearchTests.xctest' tests='11' failures='0'>
+  <testsuite name='Place_SearchTests.DetailTests' tests='2' failures='0'>
+    <testcase classname='Place_SearchTests.DetailTests' name='testExample' time='0.003'/>
+    <testcase classname='Place_SearchTests.DetailTests' name='testPerformanceExample' time='1.274'/>
+  </testsuite>
+  <testsuite name='Place_SearchTests.FilterViewModelTests' tests='4' failures='0'>
+    <testcase classname='Place_SearchTests.FilterViewModelTests' name='testShouldValidateGetPlaceType' time='0.003'/>
+    <testcase classname='Place_SearchTests.FilterViewModelTests' name='testShouldValidateHeightForRow' time='0.001'/>
+    <testcase classname='Place_SearchTests.FilterViewModelTests' name='testShouldValidateNumberOfItems' time='0.001'/>
+    <testcase classname='Place_SearchTests.FilterViewModelTests' name='testShouldValidateNumberOfSections' time='0.001'/>
+  </testsuite>
+  <testsuite name='Place_SearchTests.PlaceTests' tests='1' failures='0'>
+    <testcase classname='Place_SearchTests.PlaceTests' name='testShouldValidatePlaceResult' time='0.045'/>
+  </testsuite>
+  <testsuite name='Place_SearchTests.Place_SearchTests' tests='2' failures='0'>
+    <testcase classname='Place_SearchTests.Place_SearchTests' name='testExample' time='0.001'/>
+    <testcase classname='Place_SearchTests.Place_SearchTests' name='testPerformanceExample' time='0.253'/>
+  </testsuite>
+  <testsuite name='Place_SearchTests.SearchViewModelTests' tests='2' failures='0'>
+    <testcase classname='Place_SearchTests.SearchViewModelTests' name='testShouldValidateHeightForRow' time='0.001'/>
+    <testcase classname='Place_SearchTests.SearchViewModelTests' name='testShouldValidateNumberOfSections' time='0.001'/>
+  </testsuite>
+</testsuites>

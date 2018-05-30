@@ -7,18 +7,24 @@
 //
 
 import Foundation
+import UIKit
 
 protocol DetailLoadContent: class {
-    func didLoadContent(detail: Detail?, error: String?)
+    func didLoadContent(error: String?)
 }
 
 protocol DetailViewModelPresentable: class {
     func getPlaceDetails(with placeID: String)
+    func numberOfSections() -> Int
+    func numberOfRowsInSection() -> Int
+    func heightForRow() -> CGFloat
+    func getReviews(index: Int) -> [Review]
 }
 
 class DetailViewModel: DetailViewModelPresentable {
 
     private weak var loadContent: DetailLoadContent?
+    private var detail: Detail?
     
     init(loadContent: DetailLoadContent?) {
         self.loadContent = loadContent
@@ -27,10 +33,31 @@ class DetailViewModel: DetailViewModelPresentable {
     func getPlaceDetails(with placeID: String) {
         DetailRequest(placeID: placeID).request { (result, error) in
             guard let detail = result else {
-                self.loadContent?.didLoadContent(detail: nil, error: "Error")
+                self.loadContent?.didLoadContent(error: "Error")
                 return
             }
-            self.loadContent?.didLoadContent(detail: detail, error: nil)
+            self.detail = detail
+            self.loadContent?.didLoadContent(error: nil)
         }
     }
+    
+    func numberOfSections() -> Int {
+        return 1
+    }
+    
+    func numberOfRowsInSection() -> Int {
+        return 2
+    }
+    
+    func heightForRow() -> CGFloat {
+        return 276.0
+    }
+    
+    func getReviews(index: Int) -> [Review] {
+        guard let reviews = detail?.result?.reviews else {
+            return []
+        }
+        return reviews
+    }
+
 }

@@ -34,3 +34,14 @@ struct Review: Codable {
     var text: String?
     var time: Int?
 }
+
+struct Photo: Codable {
+    var height: Int?
+    var width: Int?
+    var photo_reference: String?
+}
+
+struct Opening: Codable {
+    var open_now: Bool?
+    var weekday_text: [String]?
+}
